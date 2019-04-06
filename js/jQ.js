@@ -38,6 +38,12 @@ $('input[type="text"]').keypress(function(event){
 	//reseting input to empty
 	$(this).val("");
 	// create new li and add to ul
-	$("ul").append("<li><span>X </span>"+ todoText +"</li>")
+	$("ul").append("<li><span><i class='fa fa-trash'></i></span>"+ todoText +"</li>")
 	}
 })
+
+// click listener on plus icon to fadeToggle input box
+
+$(".fa-plus").click(function(){
+	$("input[type='text']").fadeToggle();
+});
